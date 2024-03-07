@@ -1,0 +1,49 @@
+class Zodiak:
+    def __init__(self, tanggal, bulan):
+        self.tanggal = tanggal
+        self.bulan = bulan
+
+    def cari_zodiak(self):
+        if (self.bulan == 3 and self.tanggal >= 21) or (self.bulan == 4 and self.tanggal <= 19):
+            return "Aries"
+        elif (self.bulan == 4 and self.tanggal >= 20) or (self.bulan == 5 and self.tanggal <= 20):
+            return "Taurus"
+        elif (self.bulan == 5 and self.tanggal >= 21) or (self.bulan == 6 and self.tanggal <= 20):
+            return "Gemini"
+        elif (self.bulan == 6 and self.tanggal >= 21) or (self.bulan == 7 and self.tanggal <= 22):
+            return "Cancer"
+        elif (self.bulan == 7 and self.tanggal >= 23) or (self.bulan == 8 and self.tanggal <= 22):
+            return "Leo"
+        elif (self.bulan == 8 and self.tanggal >= 23) or (self.bulan == 9 and self.tanggal <= 22):
+            return "Virgo"
+        elif (self.bulan == 9 and self.tanggal >= 23) or (self.bulan == 10 and self.tanggal <= 22):
+            return "Libra"
+        elif (self.bulan == 10 and self.tanggal >= 23) or (self.bulan == 11 and self.tanggal <= 21):
+            return "Scorpio"
+        elif (self.bulan == 11 and self.tanggal >= 22) or (self.bulan == 12 and self.tanggal <= 21):
+            return "Sagittarius"
+        elif (self.bulan == 12 and self.tanggal >= 22) or (self.bulan == 1 and self.tanggal <= 19):
+            return "Capricorn"
+        elif (self.bulan == 1 and self.tanggal >= 20) or (self.bulan == 2 and self.tanggal <= 18):
+            return "Aquarius"
+        elif (self.bulan == 2 and self.tanggal >= 19) or (self.bulan == 3 and self.tanggal <= 20):
+            return "Pisces"
+        else:
+            return "Tanggal lahir tidak valid"
+
+def main():
+    # Meminta input tanggal lahir dari pengguna
+    tanggal = int(input("Masukkan tanggal lahir (1-31): "))
+    bulan = int(input("Masukkan bulan lahir (1-12): "))
+
+    # Membuat objek Zodiak
+    zodiak = Zodiak(tanggal, bulan)
+
+    # Mencari zodiak berdasarkan tanggal lahir
+    zodiak_user = zodiak.cari_zodiak()
+
+    # Menampilkan hasil
+    print(f"Zodiak Anda adalah: {zodiak_user}")
+
+if __name__ == "__main__":
+    main()
